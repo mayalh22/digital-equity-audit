@@ -1,4 +1,4 @@
-from analyzer import load_data, summarize_data, plot_top_districts, correlation_matrix
+from analyze import load_data, summarize_data, plot_top_districts, correlation_matrix
 
 def main():
     file_path = 'district_scores.csv'
