@@ -26,8 +26,10 @@ def plot_top_districts(df, top_n=10):
     if not os.path.exists('plots'):
         os.makedirs('plots')
 
-    # Sort the data by average commits and select top N districts
-    sorted_df = df.sort_values(by='avg_commits', ascending=False).head(top_n)
+sorted_df = df.sort_values(by='% Score 3-5', ascending=False).head(top_n)
+sns.barplot(data=sorted_df, x='District Name', y='% Score 3-5', palette='magma')
+plt.title(f'Top {top_n} Districts by % Score 3-5')
+
 
     # Create a bar plot
     plt.figure(figsize=(10, 6))
